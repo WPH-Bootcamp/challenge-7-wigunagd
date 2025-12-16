@@ -1,0 +1,9 @@
+export { default as Customers } from "./Customers";
+export { default as Results } from "./Results";
+export { default as Process } from "./Process";
+export { default as Solutions } from "./Solutions";
+export { default as Industry } from "./Industry";
+export { default as Portfolio } from "./Portfolio";
+export { default as Review } from "./Review";
+export { default as FAQ } from "./FAQ";
+export { default as FormContact } from "./FormContact";
