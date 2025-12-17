@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 
-// Define a type for the tab data structure
-interface TabData {
+type TabData = {
   id: string;
   label: string;
   content: string;
