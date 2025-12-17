@@ -31,7 +31,7 @@ const socialMediaItems: SocialMediaData[] = [
 ];
 
 const Footer = () => {
-  return <footer id="footersection" className="mb-20 text-center">
+  return <footer id="footersection" className="mb-20 text-center mx-5">
     <div className="grid bg-gray-50 border border-gray-300 dark:bg-gray-950 dark:border-gray-800 xlg:max-w-[1280px] mx-2 md:mx-12 lg:mx-auto 2xl:mx-auto py-5 rounded-xl">
 
       <div className="md:flex md:flex-row relative border-b border-gray-200 dark:border-gray-800 mx-5 pb-10">
