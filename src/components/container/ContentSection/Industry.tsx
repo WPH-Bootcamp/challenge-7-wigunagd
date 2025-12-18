@@ -56,15 +56,14 @@ const Industry = () => {
             const isActive = tab.id === activeTab;
             const buttonClasses = `px-4 py-2 text-sm text-left w-full font-medium border-l-2 mb-1 ${
               isActive
-                ? 'text-gray-700 border-orange-500' // Active state classes
-                : 'text-gray-700 border-transparent' // Inactive state classes
+                ? 'text-gray-700 border-orange-500'
+                : 'text-gray-700 border-transparent'
             }`;
 
             return (
               <button
                 key={tab.id}
                 className={buttonClasses}
-                // Use a standard onClick handler to update the state
                 onClick={() => handleTabClick(tab.id)}
                 aria-selected={isActive}
               >
@@ -78,13 +77,11 @@ const Industry = () => {
         <div className="md:col-span-4">
           {tabItems.map((tab) => {
             const isActive = tab.id === activeTab;
-            // In React, conditional rendering using the 'hidden' class or a logical AND (&&) is preferred
-            // instead of iterating over all content divs to add/remove classes.
             return (
               <div
                 key={tab.id}
                 id={tab.id}
-                className={`p-4 ${isActive ? '' : 'hidden'}`} // Conditionally apply 'hidden'
+                className={`p-4 ${isActive ? '' : 'hidden'}`}
               >
                 <p className="mb-6">{tab.content}</p>
                 <img
