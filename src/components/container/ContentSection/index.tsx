@@ -6,4 +6,4 @@ export { default as Industry } from "./Industry";
 export { default as Portfolio } from "./Portfolio";
 export { default as Review } from "./Review";
 export { default as FAQ } from "./FAQ";
-export { default as FormContact } from "./FormContact";
+export { default as Contact } from "./Contact";
