@@ -51,8 +51,6 @@ const FAQ = () => {
 
                 <div className="basis-full md:basis-2/3 flex flex-col">
 
-                    {/* accordion menu */}
-
                     {accordionList.map((a, i) => (
                         <div className="border-b border-gray-200 dark:border-gray-800">
                             <button onClick={() => toggleAccordion(i + 1)} className="w-full flex justify-between items-center py-5">
@@ -70,8 +68,6 @@ const FAQ = () => {
                             </div>
                         </div>
                     ))}
-
-                    {/* accordion menu */}
 
                 </div>
 
