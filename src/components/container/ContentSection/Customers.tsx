@@ -40,7 +40,7 @@ const Customers = () => {
             Trusted by Global Innovators & Leading Brands
         </h2>
 
-        <div className="customer-logo-marquee-container">
+        <div className="customer-logo-marquee-container mask-[linear-gradient(to_right,transparent_0,black_400px,black_calc(100%-200px),transparent_100%)]">
             <div className="customer-logo-marquee-track grayscale">
 
                 {customerLogo.map((social) => (
@@ -52,6 +52,7 @@ const Customers = () => {
                     <img className="mx-5" src={social.logosrc} alt={social.id} />
                 ))}
                 
+                {/* duplikat supaya scrolling terlihat infinite */}
                 {customerLogo.map((social) => (
                     <img className="mx-5" src={social.logosrc} alt={social.id} />
                 ))}

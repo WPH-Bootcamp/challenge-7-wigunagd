@@ -55,29 +55,23 @@ const Review = () => {
                 Trusted voices. Real experiences. Proven results.
             </p>
 
-            <div className="w-full relative md:[mask-image:_linear-gradient(to_right,transparent_0,_black_200px,_black_calc(100%-200px),transparent_100%)]">
+            <div className="w-full relative md:mask-[linear-gradient(to_right,transparent_0,black_400px,black_calc(100%-200px),transparent_100%)]">
 
                 <Swiper
-
                     modules={[Pagination, Autoplay]}
-
-
                     centeredSlides={true}
                     loop={false}
                     speed={800}
                     spaceBetween={30}
                     slideToClickedSlide={true}
-
                     autoplay={{
                         delay: 3000,
                         disableOnInteraction: false,
                     }}
-
                     pagination={{
                         el: '.swiper-pagination',
                         clickable: true,
                     }}
-
                     breakpoints={{
                         0: {
                             slidesPerView: 1,
@@ -92,7 +86,6 @@ const Review = () => {
                             spaceBetween: 10,
                         },
                     }}
-
                     className="mt-10 pt-5 pb-10"
                 >
                     {reviewsData.map(review => (

@@ -1,3 +1,27 @@
+type AccordionType = {
+    title: string;
+    desc: string;
+}
+
+const accordionList: AccordionType[] = [
+    {
+        title: "What services do you offer?",
+        desc: "We provide custom web/app development, cloud solutions, UX/UI design, and more."
+    }, {
+        title: "How do I know if this is right for my business?",
+        desc: "Book a free consult — we'll assess your goals and recommend the right approach."
+    }, {
+        title: "How much does a project cost?",
+        desc: "Every project is different. Let's talk about your needs to get a tailored estimate."
+    }, {
+        title: "How long does it take?",
+        desc: "Depends on scope — but we always prioritize quality and deadlines."
+    }, {
+        title: "Can I start with a small project first?",
+        desc: "Absolutely. We often begin with MVPs or pilot projects."
+    }
+];
+
 const FAQ = () => {
     const toggleAccordion = (id: number) => {
         const content = document.getElementById(`content-${id}`);
@@ -29,85 +53,23 @@ const FAQ = () => {
 
                     {/* accordion menu */}
 
-                    <div className="border-b border-gray-200 dark:border-gray-800">
-                        <button onClick={() => toggleAccordion(1)} className="w-full flex justify-between items-center py-5">
-                            <span className="font-bold">What services do you offer?</span>
-                            <span id="icon-1" className=" transition-transform duration-300">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" className="w-4 h-4">
-                                    <path d="M8.75 3.75a.75.75 0 0 0-1.5 0v3.5h-3.5a.75.75 0 0 0 0 1.5h3.5v3.5a.75.75 0 0 0 1.5 0v-3.5h3.5a.75.75 0 0 0 0-1.5h-3.5v-3.5Z" />
-                                </svg>
-                            </span>
-                        </button>
-                        <div id="content-1" className="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-                            <div className="pb-5 text-sm text-gray-500">
-                                We provide custom web/app development, cloud solutions, UX/UI design, and more.
+                    {accordionList.map((a, i) => (
+                        <div className="border-b border-gray-200 dark:border-gray-800">
+                            <button onClick={() => toggleAccordion(i + 1)} className="w-full flex justify-between items-center py-5">
+                                <span className="font-bold text-left">{a.title}</span>
+                                <span id={`icon-${(i + 1)}`} className="transition-transform duration-300">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" className="w-4 h-4">
+                                        <path d="M8.75 3.75a.75.75 0 0 0-1.5 0v3.5h-3.5a.75.75 0 0 0 0 1.5h3.5v3.5a.75.75 0 0 0 1.5 0v-3.5h3.5a.75.75 0 0 0 0-1.5h-3.5v-3.5Z" />
+                                    </svg>
+                                </span>
+                            </button>
+                            <div id={`content-${(i + 1)}`} className="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                                <div className="pb-5 text-sm text-gray-500">
+                                    {a.desc}
+                                </div>
                             </div>
                         </div>
-                    </div>
-
-                    <div className="border-b border-gray-200 dark:border-gray-800">
-                        <button onClick={() => toggleAccordion(2)} className="w-full flex justify-between items-center py-5">
-                            <span className="font-bold">How do I know if this is right for my business?</span>
-                            <span id="icon-2" className=" transition-transform duration-300">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" className="w-4 h-4">
-                                    <path d="M8.75 3.75a.75.75 0 0 0-1.5 0v3.5h-3.5a.75.75 0 0 0 0 1.5h3.5v3.5a.75.75 0 0 0 1.5 0v-3.5h3.5a.75.75 0 0 0 0-1.5h-3.5v-3.5Z" />
-                                </svg>
-                            </span>
-                        </button>
-                        <div id="content-2" className="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-                            <div className="pb-5 text-sm text-gray-500">
-                                Book a free consult — we’ll assess your goals and recommend the right approach.
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="border-b border-gray-200 dark:border-gray-800">
-                        <button onClick={() => toggleAccordion(3)} className="w-full flex justify-between items-center py-5">
-                            <span className="font-bold">How much does a project cost?</span>
-                            <span id="icon-3" className=" transition-transform duration-300">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" className="w-4 h-4">
-                                    <path d="M8.75 3.75a.75.75 0 0 0-1.5 0v3.5h-3.5a.75.75 0 0 0 0 1.5h3.5v3.5a.75.75 0 0 0 1.5 0v-3.5h3.5a.75.75 0 0 0 0-1.5h-3.5v-3.5Z" />
-                                </svg>
-                            </span>
-                        </button>
-                        <div id="content-3" className="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-                            <div className="pb-5 text-sm text-gray-500">
-                                Every project is different. Let’s talk about your needs to get a tailored estimate.
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="border-b border-gray-200 dark:border-gray-800">
-                        <button onClick={() => toggleAccordion(4)} className="w-full flex justify-between items-center py-5">
-                            <span className="font-bold">How long does it take?</span>
-                            <span id="icon-4" className=" transition-transform duration-300">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" className="w-4 h-4">
-                                    <path d="M8.75 3.75a.75.75 0 0 0-1.5 0v3.5h-3.5a.75.75 0 0 0 0 1.5h3.5v3.5a.75.75 0 0 0 1.5 0v-3.5h3.5a.75.75 0 0 0 0-1.5h-3.5v-3.5Z" />
-                                </svg>
-                            </span>
-                        </button>
-                        <div id="content-4" className="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-                            <div className="pb-5 text-sm text-gray-500">
-                                Depends on scope — but we always prioritize quality and deadlines.
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="border-b border-gray-200 dark:border-gray-800">
-                        <button onClick={() => toggleAccordion(5)} className="w-full flex justify-between items-center py-5">
-                            <span className="font-bold">Can I start with a small project first?</span>
-                            <span id="icon-5" className=" transition-transform duration-300">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" className="w-4 h-4">
-                                    <path d="M8.75 3.75a.75.75 0 0 0-1.5 0v3.5h-3.5a.75.75 0 0 0 0 1.5h3.5v3.5a.75.75 0 0 0 1.5 0v-3.5h3.5a.75.75 0 0 0 0-1.5h-3.5v-3.5Z" />
-                                </svg>
-                            </span>
-                        </button>
-                        <div id="content-5" className="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-                            <div className="pb-5 text-sm text-gray-500">
-                                Absolutely. We often begin with MVPs or pilot projects.
-                            </div>
-                        </div>
-                    </div>
+                    ))}
 
                     {/* accordion menu */}
 
