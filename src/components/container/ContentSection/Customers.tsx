@@ -44,17 +44,17 @@ const Customers = () => {
             <div className="customer-logo-marquee-track grayscale">
 
                 {customerLogo.map((social) => (
-                    <img className="mx-5" src={social.logosrc} alt={social.id} />
+                    <img className="mx-5" src={social.logosrc} key={social.id} alt={social.id} />
                 ))}
 
                 {/* duplikat supaya scrolling terlihat infinite */}
                 {customerLogo.map((social) => (
-                    <img className="mx-5" src={social.logosrc} alt={social.id} />
+                    <img className="mx-5" src={social.logosrc} key={social.id} alt={social.id} />
                 ))}
                 
                 {/* duplikat supaya scrolling terlihat infinite */}
                 {customerLogo.map((social) => (
-                    <img className="mx-5" src={social.logosrc} alt={social.id} />
+                    <img className="mx-5" src={social.logosrc} key={social.id} alt={social.id} />
                 ))}
 
             </div>

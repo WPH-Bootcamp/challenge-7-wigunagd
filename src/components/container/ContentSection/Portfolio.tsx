@@ -33,7 +33,7 @@ const Portfolio = () => {
       <div className="flex flex-col md:flex-row w-full mx-auto p-4 space-y-4 md:space-y-0 md:space-x-4 px-5 md:px-20 2xl:px-35 my-5">
         
         {portfolioList.map((p) => (
-        <div className="w-full md:w-1/3 grid content-cente">
+        <div key={p.title} className="w-full md:w-1/3 grid content-cente">
           <img src={p.imgsrc} alt={p.title} className="w-full" />
           <p className="globaltextcolortheme text-xs mt-5">{p.desc}</p>
           <p>{p.title}</p>

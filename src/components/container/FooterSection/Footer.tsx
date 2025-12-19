@@ -49,7 +49,7 @@ const Footer = () => {
         <ul className="flex ml-2 md:absolute md:right-3 md:bottom-3">
 
           {socialMediaItems.map((social) => (
-            <li className="p-3">
+            <li key={social.id} className="p-3">
               <a href={social.href}>
                 <img src={social.iconsrc} alt={social.id} className="border border-gray-300 rounded-full w-7 h-7 p-0.25 icon-tint" />
               </a>

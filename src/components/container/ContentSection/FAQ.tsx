@@ -52,7 +52,7 @@ const FAQ = () => {
                 <div className="basis-full md:basis-2/3 flex flex-col">
 
                     {accordionList.map((a, i) => (
-                        <div className="border-b border-gray-200 dark:border-gray-800">
+                        <div key={a.title} className="border-b border-gray-200 dark:border-gray-800">
                             <button onClick={() => toggleAccordion(i + 1)} className="w-full flex justify-between items-center py-5">
                                 <span className="font-bold text-left">{a.title}</span>
                                 <span id={`icon-${(i + 1)}`} className="transition-transform duration-300">

@@ -1,8 +1,9 @@
 import Hero from "./components/container/HeroSection/";
 import Header from "./components/container/HeaderSection";
-import {Customers, Results, Process, Solutions, Industry, Portfolio, Review, FAQ, Contact} from "./components/container/ContentSection/";
+import { Customers, Results, Process, Solutions, Industry, Portfolio, Review, FAQ, Contact } from "./components/container/ContentSection/";
 import ButtonSwitchDarklight from "./components/ui/Button/ButtonSwithDarkLight";
-import Footer from "./components/container/FooterSection/"; 
+import Footer from "./components/container/FooterSection/";
+import Modal from "./components/container/Popup";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Footer />
         <ButtonSwitchDarklight />
       </main>
+      <Modal />
     </>
   );
 }

@@ -1,6 +1,51 @@
 import { Input, TextArea, Chechbox } from "./";
 import Button from "../Button";
 
+
+function getRandomBoolean(): boolean {
+    return Math.random() < 0.5;
+}
+
+function openModal(): void {
+
+    const msgfailtitle: string = "Oops! Something went wrong.";
+    const msgfail: string = "We couldn't send your message. Please try again or check your connection.";
+    const btnfailtext: string = "Try Again";
+
+    const msgsuccesstitle: string = "Message Received!";
+    const msgsuccess: string = "Thanks for reaching out — we'll get back to you as soon as possible.";
+    const btnsuccesstext: string = "Back to Home";
+
+    const imgmsgfail = document.getElementById('imgmsgfail') as HTMLImageElement | null;
+    const imgmsgsuccess = document.getElementById('imgmsgsuccess') as HTMLImageElement | null;
+
+    const msgtitle = document.getElementById('msgtitle') as HTMLElement | null;
+    const msgcontent = document.getElementById('msgcontent') as HTMLElement | null;
+    const btnmsgtext = document.getElementById('btnmsgaction') as HTMLElement | null;
+
+    if (getRandomBoolean()) {
+        if (msgtitle) msgtitle.innerText = msgsuccesstitle;
+        if (msgcontent) msgcontent.innerText = msgsuccess;
+        if (btnmsgtext) btnmsgtext.innerText = btnsuccesstext;
+
+        if (imgmsgsuccess) imgmsgsuccess.classList.remove('hidden');
+        if (imgmsgfail) imgmsgfail.classList.add('hidden');
+    } else {
+        if (msgtitle) msgtitle.innerText = msgfailtitle
+        if (msgcontent) msgcontent.innerText = msgfail
+        if (btnmsgtext) btnmsgtext.innerText = btnfailtext
+
+        if (imgmsgsuccess) imgmsgsuccess.classList.add('hidden');
+        if (imgmsgfail) imgmsgfail.classList.remove('hidden');
+    }
+
+    const modal = document.getElementById("dialogModal");
+    if (modal) {
+        modal.classList.remove("hidden");
+        modal.setAttribute("aria-hidden", "false");
+    }
+}
+
 type CheckBoxType = {
     id: string;
     name: string;
@@ -32,14 +77,14 @@ const FormContact = () => {
 
             <div className="grid grid-col md:grid-flow-col md:grid-rows-3 overflow-y-auto mb-5">
                 {chechboxes.map((chk) => (
-                    <div className="flex items-center my-2">
-                    <Chechbox id={chk.id} name={chk.name} value={chk.value} label={chk.label} />
-                </div>
+                    <div key={chk.id} className="flex items-center my-2">
+                        <Chechbox id={chk.id} name={chk.name} value={chk.value} label={chk.label} />
+                    </div>
                 ))}
             </div>
 
             <div className="flex rounded-3xl bg-gradient-to-br from-red-200 to-orange-600 p-0.5">
-                <Button id="SendMessage" type="submit" label="Send" />
+                <Button id="SendMessage" type="button" label="Send" onClick={openModal} />
             </div>
         </form>
     );

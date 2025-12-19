@@ -47,14 +47,14 @@ const processItems: ProcessType[] = [
 
 function leftitem(num: number, title: string, description: string, linecolor: string) {
   return (
-    <div className="flex md:contents flex-row-reverse">
+    <div key={num} className="flex md:contents flex-row-reverse">
       <div className="relative p-4 my-6 border bg-gray-50 border-gray-300 dark:bg-gray-950 dark:border-gray-800 rounded-xl col-start-1 col-end-5 mr-auto md:mr-0 md:ml-auto w-full">
 
         <h3 className="text-lg font-semibold lg:text-xl">{title}</h3>
         <p className="mt-2 text-gray-500">{description}</p>
 
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="size-6 absolute top-2 right-4">
-          <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 15.75 7.5-7.5 7.5 7.5" />
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-6 absolute top-2 right-4">
+          <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 15.75 7.5-7.5 7.5 7.5" />
         </svg>
 
       </div>
@@ -70,7 +70,7 @@ function leftitem(num: number, title: string, description: string, linecolor: st
 
 function rightitem(num: number, title: string, description: string, linecolor: string) {
   return (
-    <div className="flex md:contents">
+    <div key={num} className="flex md:contents">
       <div className="relative col-start-5 col-end-6 mr-7 md:mx-auto">
         <div className="flex items-center justify-center w-6 h-full">
           <div className={`w-0.5 h-full ${linecolor}`}></div>
@@ -82,8 +82,8 @@ function rightitem(num: number, title: string, description: string, linecolor: s
         <h3 className="text-lg font-semibold lg:text-xl">{title}</h3>
         <p className="mt-2 text-gray-500">{description}</p>
 
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="size-6 absolute top-2 right-4">
-          <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 15.75 7.5-7.5 7.5 7.5" />
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-6 absolute top-2 right-4">
+          <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 15.75 7.5-7.5 7.5 7.5" />
         </svg>
 
       </div>

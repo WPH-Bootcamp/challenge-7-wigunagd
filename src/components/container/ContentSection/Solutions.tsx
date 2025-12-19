@@ -56,7 +56,7 @@ const Solutions = () => {
     <div className="flex flex-wrap w-full my-10 justify-center">
       {solutionsList.map(
         (s) => (
-          <div className="relative 
+          <div key={s.title} className="relative 
             w-full 
             md:w-sm 
             my-6 
