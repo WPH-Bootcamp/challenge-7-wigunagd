@@ -1,5 +1,6 @@
 import { Input, TextArea, Chechbox } from "./";
 import Button from "../Button";
+import type { FormEvent } from "react";
 
 
 function getRandomBoolean(): boolean {
@@ -63,8 +64,15 @@ const chechboxes: CheckBoxType[] = [
 ];
 
 const FormContact = () => {
+
+    const submitAction = (event: FormEvent<HTMLFormElement>) => {
+        event.preventDefault();
+
+        openModal();
+    } 
+
     return (
-        <form id="messageform">
+        <form id="messageform" onSubmit={submitAction}>
             <div className="mb-5">
                 <Input id="name" name="name" type="text" label="Name" placeholder="Enter your name" />
             </div>
@@ -84,7 +92,7 @@ const FormContact = () => {
             </div>
 
             <div className="flex rounded-3xl bg-gradient-to-br from-red-200 to-orange-600 p-0.5">
-                <Button id="SendMessage" type="button" label="Send" onClick={openModal} />
+                <Button id="SendMessage" type="submit" label="Send" />
             </div>
         </form>
     );
