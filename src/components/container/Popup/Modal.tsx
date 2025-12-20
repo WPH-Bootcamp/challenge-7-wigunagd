@@ -14,7 +14,7 @@ const Modal = () => {
 
       <div className="flex items-center justify-center min-h-full p-4 text-center sm:p-0">
 
-        <div id="modalPanel" className="relative  rounded-xl shadow-2xl overflow-hidden transform transition-all sm:w-full sm:max-w-lg w-full duration-300 ease-out">
+        <div id="modalPanel" className="relative rounded-xl shadow-2xl overflow-hidden transform transition-all w-[353px] md:w-[518px] duration-300 ease-out">
 
           <div className="flex items-start justify-between pb-4 bg-white dark:bg-gray-700">
             &nbsp;
@@ -28,11 +28,11 @@ const Modal = () => {
             </div>
           </div>
 
-          <div className="bg-white dark:bg-gray-900">
+          <div className="bg-white dark:bg-gray-900 px-5">
             {/* <!-- Modal Body --> */}
             <div className="text-center py-20">
-              <h4 className="text-2xl" id="msgtitle">Title Here</h4>
-              <p className="text-sm text-gray-500" id="msgcontent">
+              <h4 className="text-lg font-bold" id="msgtitle">Title Here</h4>
+              <p className="text-md text-gray-500" id="msgcontent">
                 Message Here
               </p>
             </div>
