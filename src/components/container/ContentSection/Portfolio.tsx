@@ -22,11 +22,11 @@ const portfolioList: PortfolioType[] = [
 
 const Portfolio = () => {
   return (
-    <section id="portfoliosection" className="md:px-15 mb-20">
-      <h2 className="text-center text-3xl mx-5 md:mx-20 2xl:mx-55">
+    <section id="portfoliosection" className="md:px-3 mb-20">
+      <h2 className="text-center font-bold md:text-3xl text-2xl">
         From Vision to Launch! Projects We’re Proud Of
       </h2>
-      <p className="text-center text-gray-500 mx-5 md:mx-20 2xl:mx-55">
+      <p className="text-center text-gray-500 mx-2 md:text-lg text-sm font-medium">
         Take a closer look at our recent work powering startups, enterprises, and everything in between.
       </p>
 
@@ -35,8 +35,8 @@ const Portfolio = () => {
         {portfolioList.map((p) => (
         <div key={p.title} className="w-full md:w-1/3 grid content-cente">
           <img src={p.imgsrc} alt={p.title} className="w-full" />
-          <p className="globaltextcolortheme text-xs mt-5">{p.desc}</p>
-          <p>{p.title}</p>
+          <p className="globaltextcolortheme text-sm md:text-md font-medium mt-5">{p.desc}</p>
+          <p className="text-md md:text-xl font-bold">{p.title}</p>
         </div>
       ))}
 

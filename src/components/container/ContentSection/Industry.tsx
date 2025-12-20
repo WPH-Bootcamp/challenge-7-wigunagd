@@ -40,21 +40,21 @@ const Industry = () => {
   };
 
   return (
-    <section id="industrysection" className="mb-20">
-      <h2 className="text-3xl my-5 mx-5 md:mx-20 2xl:mx-55">
+    <section id="industrysection" className="md:py-[80px] md:px-[80px] py-[40px] px-[16px]">
+      <h2 className="font-bold md:text-3xl text-2xl mx-2 height-[32px]">
         Built for Your Industry
       </h2>
-      <p className="text-gray-500 mx-5 md:mx-20 2xl:mx-55">
+      <p className="text-gray-500 mx-2 md:text-lg text-sm font-medium height-[56px] mb-10">
         We’ve helped companies across industries launch smarter, faster, and more securely.
       </p>
 
-      <div className="mx-5 md:mx-20 2xl:mx-55 my-5 grid md:grid-cols-5">
+      <div className="grid md:grid-cols-5 mx-2">
 
         {/* Tab Buttons / Navigation */}
         <div className="md:col-span-1">
           {tabItems.map((tab) => {
             const isActive = tab.id === activeTab;
-            const buttonClasses = `px-4 py-2 text-sm text-left w-full font-medium border-l-2 mb-1 ${
+            const buttonClasses = `px-4 py-2 md:text-xl text-md font-bold text-left w-full border-l-2 mb-1 ${
               isActive
                 ? 'text-gray-700 border-orange-500'
                 : 'text-gray-700 border-transparent'
@@ -81,7 +81,7 @@ const Industry = () => {
               <div
                 key={tab.id}
                 id={tab.id}
-                className={`p-4 ${isActive ? '' : 'hidden'}`}
+                className={`mt-4 md:mt-0 md:text-lg text-sm ${isActive ? '' : 'hidden'}`}
               >
                 <p className="mb-6">{tab.content}</p>
                 <img

@@ -35,12 +35,12 @@ const customerLogo : CustomerLogoType[] = [
 ];
 
 const Customers = () => {
-    return <section id="customersection" className="mb-20">
-        <h2 className="text-center text-xl my-5 mx-2">
+    return <div className="w-full md:h-[236px] h-[144px]">
+        <h2 className="text-center md:text-xl text-sm font-bold md:h-[36px] h-[30px]">
             Trusted by Global Innovators & Leading Brands
         </h2>
 
-        <div className="customer-logo-marquee-container mask-[linear-gradient(to_right,transparent_0,black_400px,black_calc(100%-200px),transparent_100%)]">
+        <div className="md:h-[200px] h-[114px] customer-logo-marquee-container md:mask-[linear-gradient(to_right,transparent_0,black_400px,black_calc(100%-200px),transparent_100%)]">
             <div className="customer-logo-marquee-track grayscale">
 
                 {customerLogo.map((social) => (
@@ -59,7 +59,7 @@ const Customers = () => {
 
             </div>
         </div>
-    </section>;
+    </div>;
 };
 
 export default Customers;

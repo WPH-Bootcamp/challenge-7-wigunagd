@@ -31,14 +31,14 @@ const socialMediaItems: SocialMediaData[] = [
 ];
 
 const Footer = () => {
-  return <footer id="footersection" className="mb-20 text-center md:mx-5">
+  return <footer id="footersection" className="mb-20 text-center md:mx-23">
     <div className="grid bg-gray-50 border border-gray-300 dark:bg-gray-950 dark:border-gray-800 xlg:max-w-[1280px] mx-2 md:mx-12 lg:mx-auto 2xl:mx-auto py-5 rounded-xl">
 
       <div className="md:flex md:flex-row relative border-b border-gray-200 dark:border-gray-800 mx-5 pb-10">
 
         <Logo logoClass='mb-5 md:absolute md:right-1' />
 
-        <p className="text-3xl text-left md:max-w-62.5">LET'S DISCUSS YOUR IDEAS</p>
+        <p className="font-bold md:text-3xl text-2xl text-left md:max-w-62.5">LET'S DISCUSS YOUR IDEAS</p>
 
       </div>
 

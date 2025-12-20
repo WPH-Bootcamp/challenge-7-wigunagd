@@ -8,7 +8,7 @@ type NavigationMenuItems = {
 
 const NavigationMenu = ({ ulClass, liClass, children }: NavigationMenuItems) => {
     return (
-        <ul className={ulClass}>
+        <ul className={`${ulClass} md:text-md font-semibold text-sm`}>
             <li className={liClass}>
                 <a href="#about">About</a>
             </li>

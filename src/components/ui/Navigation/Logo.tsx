@@ -5,7 +5,7 @@ type LogoProps = {
 const Logo = ({logoClass}: LogoProps) => {
 
     return (
-        <div className={`flex font-black ${logoClass}`}>
+        <div className={`flex font-semibold ${logoClass}`}>
                 <a className="flex items-center justify-center" href="#">
                     <img src="src/assets/images/logo-symbol.svg" alt="logo" />&nbsp;Your
                     Logo</a>

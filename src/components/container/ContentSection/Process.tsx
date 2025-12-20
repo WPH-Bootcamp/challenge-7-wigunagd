@@ -92,31 +92,27 @@ function rightitem(num: number, title: string, description: string, linecolor: s
 }
 
 const Process = () => {
-  return <section id="processsection" className="2xl:px-45 xl:px-5 md:px-15 mb-20">
-    <h2 className="text-center text-3xl my-5 mx-5">
+  return <section id="processsection" className="md:py-[80px] md:px-[80px] py-[40px] px-[16px]">
+    <h2 className="text-center font-bold md:text-3xl text-2xl">
       Our Process
     </h2>
-    <p className="text-center text-gray-500 mx-2">
+    <p className="text-center text-gray-500 mx-2 md:text-lg text-sm font-medium">
       Clear steps. Smart execution. Results you can count on.
     </p>
 
-    <div className="p-4 mx-2">
+    <div className="flex flex-col grid-cols-9 p-2 mx-auto md:grid">
+      {
+        processItems.map(
+          (p, i) => {
+            const itemNum = i + 1;
+            const isOdd = itemNum % 2 !== 0;
 
-      <div className="flex flex-col grid-cols-9 p-2 mx-auto md:grid">
-        {
-          processItems.map(
-            (p, i) => {
-              const itemNum = i + 1;
-              const isOdd = itemNum % 2 !== 0;
-
-              return isOdd
-                ? leftitem(itemNum, p.title, p.desc, p.lineColor)
-                : rightitem(itemNum, p.title, p.desc, p.lineColor)
-            }
-          )
-        }
-      </div>
-
+            return isOdd
+              ? leftitem(itemNum, p.title, p.desc, p.lineColor)
+              : rightitem(itemNum, p.title, p.desc, p.lineColor)
+          }
+        )
+      }
     </div>
 
   </section>;

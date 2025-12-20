@@ -12,7 +12,7 @@ const ButtonLink = ({href, divClass, aClass, children}: ButtonProperties) => {
     return (
         <div className={`rounded-3xl bg-gradient-to-br from-red-200 to-orange-600 p-0.5 ${divClass}`}>
             <a href={href} 
-            className={`text-center rounded-3xl text-white globalbackgroundtheme hover:bg-amber-300 py-2 px-10 block ${aClass}`}>
+            className={`text-center rounded-3xl font-bold text-white globalbackgroundtheme hover:bg-amber-300 py-2 px-10 block ${aClass}`}>
                 {children}
             </a>
         </div>

@@ -34,16 +34,16 @@ const FAQ = () => {
     };
 
     return (
-        <section id="faqsection" className="mb-20">
+        <section id="faqsection" className="mb-20 md:px-3">
 
-            <div className="grid my-5 pb-5 mx-5 md:mx-20 2xl:mx-55 md:flex-row border-b border-gray-200 dark:border-gray-800">
+            <div className="flex my-5 pb-5 mx-5 md:mx-20 2xl:mx-55 md:flex-row border-b border-gray-200 dark:border-gray-800">
                 <div className="basis-full md:basis-2/3 flex">
-                    <h2 className="text-3xl md:w-60 py-2 md:py-5">
+                    <h2 className="font-bold md:text-3xl text-2xl md:w-65 py-2 md:py-5">
                         Need Help? Start Here.
                     </h2>
                 </div>
                 <div className="basis-full md:basis-1/3 py-2 md:py-5 align-bottom flex flex-col md:justify-center md:items-end">
-                    <p className="text-gray-500 p-0 text-sm md:text-right md:w-50">Everything you need to know — all in one place.</p>
+                    <p className="text-gray-500 mx-2 md:text-lg text-sm font-medium md:text-right md:w-50">Everything you need to know — all in one place.</p>
                 </div>
             </div>
 
